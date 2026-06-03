@@ -56,7 +56,7 @@ export default function Presentation() {
     return () => window.removeEventListener("keydown", onKey);
   }, [next, prev]);
 
-  // Swipe gestures for touch devices
+  // Swipe gestures — handled on the overlay div (not the iframe, which swallows touch events)
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -71,11 +71,7 @@ export default function Presentation() {
   const scaledH = SLIDE_H * scale;
 
   return (
-    <div
-      className="relative w-screen h-screen bg-[#020f1d] overflow-hidden"
-      onTouchStart={onTouchStart}
-      onTouchEnd={onTouchEnd}
-    >
+    <div className="relative w-screen h-screen bg-[#020f1d] overflow-hidden">
       {/* Scaled slide area */}
       <div
         className="absolute inset-0 flex items-center justify-center"
@@ -101,6 +97,12 @@ export default function Presentation() {
               transformOrigin: "top left",
               transform: `scale(${scale})`,
             }}
+          />
+          {/* Transparent overlay to capture swipe touches that the iframe would otherwise swallow */}
+          <div
+            className="absolute inset-0"
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
           />
         </div>
       </div>
