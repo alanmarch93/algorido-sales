@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Presentation Slide | From "Talking" to "Doing"</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#ffdad6",
+                    "surface-tint": "#b8c4ff",
+                    "secondary-fixed": "#7df4ff",
+                    "surface-variant": "#283645",
+                    "on-secondary-fixed": "#002022",
+                    "inverse-primary": "#2450dc",
+                    "error": "#ffb4ab",
+                    "on-surface-variant": "#c4c5d7",
+                    "surface-container": "#12212f",
+                    "surface-dim": "#051423",
+                    "midnight-bg": "#0B0E14",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c5c6ce",
+                    "tertiary-fixed": "#e2e2ea",
+                    "tertiary-container": "#6e6f76",
+                    "outline-variant": "#434655",
+                    "secondary-fixed-dim": "#00dbe9",
+                    "on-tertiary-fixed": "#191b21",
+                    "on-primary": "#002584",
+                    "primary-container": "#3c63ee",
+                    "background": "#051423",
+                    "surface-container-highest": "#283645",
+                    "primary": "#b8c4ff",
+                    "outline": "#8e90a0",
+                    "primary-fixed-dim": "#b8c4ff",
+                    "tertiary": "#c5c6ce",
+                    "on-secondary": "#00363a",
+                    "success-glow": "#00FFC2",
+                    "primary-fixed": "#dde1ff",
+                    "alert-signal": "#FF3B3B",
+                    "surface-card": "#161B22",
+                    "surface-container-low": "#0e1d2b",
+                    "on-secondary-fixed-variant": "#004f54",
+                    "secondary": "#d3fbff",
+                    "inverse-surface": "#d5e4f8",
+                    "on-tertiary": "#2e3036",
+                    "on-tertiary-fixed-variant": "#45474d",
+                    "on-background": "#d5e4f8",
+                    "surface-bright": "#2c3a4a",
+                    "on-primary-fixed": "#001453",
+                    "on-secondary-container": "#00686f",
+                    "on-primary-container": "#f4f3ff",
+                    "on-primary-fixed-variant": "#0037b9",
+                    "on-surface": "#d5e4f8",
+                    "secondary-container": "#00eefc",
+                    "surface": "#051423",
+                    "on-error": "#690005",
+                    "surface-container-high": "#1d2b3a",
+                    "inverse-on-surface": "#243241",
+                    "on-tertiary-container": "#f3f3fb",
+                    "surface-container-lowest": "#020f1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "mono-label": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "mono-label": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .presentation-bg {
+            background-color: #051423;
+            background-image: radial-gradient(circle at 50% 50%, #0e1d2b 0%, #051423 100%);
+        }
+        .glass-panel-heavy {
+            background: rgba(18, 33, 47, 0.8);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(67, 70, 85, 0.5);
+        }
+        .ai-hero-panel {
+            background: linear-gradient(135deg, rgba(18, 33, 47, 0.9) 0%, rgba(36, 80, 220, 0.15) 100%);
+            border: 2px solid #b8c4ff;
+            box-shadow: 0 0 40px rgba(58, 99, 238, 0.2);
+        }
+        .ai-glow-accent {
+            position: relative;
+        }
+        .ai-glow-accent::after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(90deg, #00dbe9, #b8c4ff, #00dbe9);
+            background-size: 200% auto;
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.5;
+            animation: move-gradient 4s linear infinite;
+        }
+        @keyframes move-gradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        @keyframes pulse-cyan {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+        .animate-ai-pulse {
+            animation: pulse-cyan 3s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="presentation-bg text-on-surface font-body-md overflow-hidden min-h-screen flex items-center justify-center p-gutter">
+<div class="max-w-container-max w-full mx-auto flex flex-col h-full lg:aspect-video justify-center">
+<!-- Slide Header -->
+<header class="mb-12 text-center">
+<div class="inline-block mb-4 px-3 py-1 bg-surface-container-high rounded-full border border-outline-variant/30">
+<span class="font-mono-label text-mono-label text-secondary-fixed tracking-[0.2em] uppercase">Phase 03 — Operational Evolution</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl lg:text-[64px] lg:leading-tight text-on-surface mb-4">From "Talking" to <span class="text-primary italic">"Doing"</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto opacity-80">
+            Shifting from reactive Large Language Models to proactive Agentic Intelligence that executes strategy across the digital economy.
+        </p>
+</header>
+<!-- Comparison Canvas -->
+<div class="grid grid-cols-1 md:grid-cols-11 items-stretch gap-0 md:gap-4 relative">
+<!-- Traditional Chatbots Card -->
+<div class="md:col-span-5 glass-panel-heavy rounded-2xl p-10 flex flex-col justify-between border-r-0 md:rounded-r-none">
+<div>
+<div class="flex items-center justify-between mb-10">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant">Regular Chatbots</h3>
+<span class="material-symbols-outlined text-4xl text-on-surface-variant opacity-40">chat_bubble</span>
+</div>
+<ul class="space-y-10">
+<li class="flex gap-6">
+<div class="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">help_center</span>
+</div>
+<div>
+<h4 class="font-mono-label text-mono-label uppercase text-outline mb-1">Knowledge Retrieval</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Answers questions based on static training data or RAG contexts.</p>
+</div>
+</li>
+<li class="flex gap-6">
+<div class="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">edit_note</span>
+</div>
+<div>
+<h4 class="font-mono-label text-mono-label uppercase text-outline mb-1">Drafting &amp; Synthesis</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Summarizes text, writes emails, and helps generate initial ideas.</p>
+</div>
+</li>
+<li class="flex gap-6">
+<div class="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">timer</span>
+</div>
+<div>
+<h4 class="font-mono-label text-mono-label uppercase text-outline mb-1">Efficiency Gain</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Saves time on manual writing and data lookup tasks.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="mt-12 pt-6 border-t border-outline-variant/20">
+<p class="font-mono-label text-mono-label text-outline uppercase tracking-wider italic">Outcome: Human-in-the-loop assistance</p>
+</div>
+</div>
+<!-- VS Center Divider -->
+<div class="hidden md:flex md:col-span-1 items-center justify-center z-10 -mx-4">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20 border-4 border-background">
+<span class="font-mono-label text-mono-label text-on-primary font-bold">VS</span>
+</div>
+</div>
+<!-- Agentic AI (Algorido) Card -->
+<div class="md:col-span-5 ai-hero-panel rounded-2xl p-10 flex flex-col justify-between md:rounded-l-none">
+<div>
+<div class="flex items-center justify-between mb-10">
+<h3 class="font-headline-md text-headline-md text-primary">Agentic AI (Algorido)</h3>
+<span class="material-symbols-outlined text-4xl text-primary animate-ai-pulse" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<ul class="space-y-10">
+<li class="flex gap-6">
+<div class="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+</div>
+<div>
+<h4 class="font-mono-label text-mono-label uppercase text-primary mb-1">Autonomous Agency</h4>
+<p class="font-body-md text-body-md text-on-surface">Independently interacts with protocols, APIs, and blockchains to achieve goals.</p>
+</div>
+</li>
+<li class="flex gap-6">
+<div class="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+</div>
+<div>
+<h4 class="font-mono-label text-mono-label uppercase text-primary mb-1">Complex Orchestration</h4>
+<p class="font-body-md text-body-md text-on-surface">Manages multi-step financial logic and crosses disparate systems without supervision.</p>
+</div>
+</li>
+<li class="flex gap-6">
+<div class="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div>
+<h4 class="font-mono-label text-mono-label uppercase text-primary mb-1">Economic Production</h4>
+<p class="font-body-md text-body-md text-on-surface font-semibold">Purpose-built to perform high-frequency tasks that generate measurable value.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="mt-12 pt-6 border-t border-primary/20 flex justify-between items-center">
+<p class="font-mono-label text-mono-label text-primary uppercase tracking-wider font-bold">Outcome: Fully autonomous revenue engine</p>
+<div class="flex items-center gap-2 text-primary font-mono-label text-mono-label group cursor-pointer">
+<span class="group-hover:mr-2 transition-all">SEE EXECUTION</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="fixed inset-0 -z-10 pointer-events-none opacity-30">
+<div class="absolute top-[-20%] right-[-10%] w-[60%] h-[60%] bg-primary/20 blur-[150px] rounded-full"></div>
+<div class="absolute bottom-[-20%] left-[-10%] w-[50%] h-[50%] bg-secondary-fixed/10 blur-[120px] rounded-full"></div>
+</div>
+</div>
+</body></html>

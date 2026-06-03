@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(22, 27, 34, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(67, 70, 85, 0.3);
+        }
+        .problem-glow {
+            box-shadow: 0 0 40px rgba(255, 59, 59, 0.15);
+        }
+        .glow-border-red {
+            border: 1px solid rgba(255, 59, 59, 0.3);
+        }
+        @keyframes pulse-signal {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .animate-signal {
+            animation: pulse-signal 2s infinite ease-in-out;
+        }
+        body {
+            background-color: #051423;
+            overflow: hidden; /* Standard for presentation slides */
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#b8c4ff",
+                        "secondary-fixed": "#7df4ff",
+                        "surface-variant": "#283645",
+                        "on-secondary-fixed": "#002022",
+                        "inverse-primary": "#2450dc",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c5d7",
+                        "surface-container": "#12212f",
+                        "surface-dim": "#051423",
+                        "midnight-bg": "#0B0E14",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c5c6ce",
+                        "tertiary-fixed": "#e2e2ea",
+                        "tertiary-container": "#6e6f76",
+                        "outline-variant": "#434655",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "on-tertiary-fixed": "#191b21",
+                        "on-primary": "#002584",
+                        "primary-container": "#3c63ee",
+                        "background": "#051423",
+                        "surface-container-highest": "#283645",
+                        "primary": "#b8c4ff",
+                        "outline": "#8e90a0",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "tertiary": "#c5c6ce",
+                        "on-secondary": "#00363a",
+                        "success-glow": "#00FFC2",
+                        "primary-fixed": "#dde1ff",
+                        "alert-signal": "#FF3B3B",
+                        "surface-card": "#161B22",
+                        "surface-container-low": "#0e1d2b",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "secondary": "#d3fbff",
+                        "inverse-surface": "#d5e4f8",
+                        "on-tertiary": "#2e3036",
+                        "on-tertiary-fixed-variant": "#45474d",
+                        "on-background": "#d5e4f8",
+                        "surface-bright": "#2c3a4a",
+                        "on-primary-fixed": "#001453",
+                        "on-secondary-container": "#00686f",
+                        "on-primary-container": "#f4f3ff",
+                        "on-primary-fixed-variant": "#0037b9",
+                        "on-surface": "#d5e4f8",
+                        "secondary-container": "#00eefc",
+                        "surface": "#051423",
+                        "on-error": "#690005",
+                        "surface-container-high": "#1d2b3a",
+                        "inverse-on-surface": "#243241",
+                        "on-tertiary-container": "#f3f3fb",
+                        "surface-container-lowest": "#020f1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "mono-label": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "mono-label": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-midnight-bg text-on-surface font-body-md min-h-screen flex items-center justify-center p-8">
+<!-- Slide Container (Presentation Ratio) -->
+<main class="w-full max-w-[1400px] aspect-[16/9] flex flex-col relative glass-panel rounded-2xl overflow-hidden border border-outline-variant/30 shadow-2xl">
+<!-- Decorative background elements -->
+<div class="absolute -top-20 -left-20 w-[600px] h-[600px] bg-alert-signal/5 blur-[150px] rounded-full -z-10 pointer-events-none"></div>
+<div class="absolute -bottom-20 -right-20 w-[400px] h-[400px] bg-primary/5 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+<!-- Presentation Header Content -->
+<div class="px-16 pt-16 pb-8 flex justify-between items-start">
+<div class="max-w-3xl">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-3 h-3 rounded-full bg-alert-signal animate-signal"></span>
+<span class="font-mono-label text-sm text-alert-signal uppercase tracking-[0.3em]">Critical Protocol: The Core Problem</span>
+</div>
+<h1 class="font-headline-xl text-6xl text-on-surface mb-8">Why Humans Struggle to Trade.</h1>
+<p class="font-body-lg text-2xl text-on-surface-variant leading-relaxed opacity-90 max-w-2xl">
+                The digital economy moves too fast for biological constraints. While the world sleeps, the data stream creates a gap that humans cannot fill.
+            </p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-primary/30 text-6xl">terminal</span>
+<p class="font-mono-label text-xs text-on-surface-variant/40 mt-2 uppercase tracking-widest">Algorido AI Presentation</p>
+</div>
+</div>
+<!-- Problem Points Section -->
+<div class="flex-grow px-16 flex items-center">
+<div class="grid grid-cols-3 gap-10 w-full">
+<!-- Point 1 -->
+<div class="p-10 rounded-2xl border border-outline-variant/20 bg-surface-container/30 hover:problem-glow hover:glow-border-red transition-all duration-500 group">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-alert-signal text-5xl">schedule</span>
+<div class="h-px flex-grow bg-outline-variant/30 group-hover:bg-alert-signal/40 transition-colors"></div>
+</div>
+<h3 class="font-headline-md text-3xl text-on-surface mb-6">Markets Never Sleep</h3>
+<p class="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                    Global liquidity shifts in milliseconds while humans sleep. 3:00 AM opportunities are missed entirely by traditional traders.
+                </p>
+</div>
+<!-- Point 2 -->
+<div class="p-10 rounded-2xl border border-outline-variant/20 bg-surface-container/30 hover:problem-glow hover:glow-border-red transition-all duration-500 group">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-alert-signal text-5xl">speed</span>
+<div class="h-px flex-grow bg-outline-variant/30 group-hover:bg-alert-signal/40 transition-colors"></div>
+</div>
+<h3 class="font-headline-md text-3xl text-on-surface mb-6">We Are Too Slow</h3>
+<p class="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                    Human latency is measured in seconds. Crypto windows close in milliseconds. Biological reaction is a terminal bottleneck.
+                </p>
+</div>
+<!-- Point 3 -->
+<div class="p-10 rounded-2xl border border-outline-variant/20 bg-surface-container/30 hover:problem-glow hover:glow-border-red transition-all duration-500 group">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-alert-signal text-5xl">psychology</span>
+<div class="h-px flex-grow bg-outline-variant/30 group-hover:bg-alert-signal/40 transition-colors"></div>
+</div>
+<h3 class="font-headline-md text-3xl text-on-surface mb-6">We Get Emotional</h3>
+<p class="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                    Fear and greed drive 68% of manual decisions. Pure logic is discarded under pressure, leading to systemic portfolio decay.
+                </p>
+</div>
+</div>
+</div>
+<!-- Stats Footer / The Biological Gap -->
+<div class="relative h-64 overflow-hidden border-t border-outline-variant/20">
+<img alt="Network Chaos Background" class="absolute inset-0 w-full h-full object-cover opacity-20 saturate-0 hover:saturate-100 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDepOiH5b7S3xWSA_PgrdDx6aq25tt6W6FbUvAJxGbxL8wfd8hjJug1jXGXe-OBNEQxIScEF--VzUb2ud2uzToLIGgCw0qIR3vn5NfzSyiTknghrwlZtjWZyNouvPjRK-Z5Pu4gDnavkTZm5c0RwGcGuzmRxmkuVJK3Bm3UO93lsNTdiviG1gBHwcJwF5wrnG3bQ9DRZjKrZRZrwB0wp49wzBvIXHuPjN5-u3O1bGXG5Vg4_8j2P8Py7oWgumPeC3tOeQETcU_UY-9H"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container via-transparent to-surface-container"></div>
+<div class="relative z-10 h-full flex items-center justify-between px-24">
+<div>
+<h2 class="font-headline-lg text-4xl text-on-surface">The Biological Gap</h2>
+<p class="font-mono-label text-alert-signal tracking-widest mt-1">HUMAN VS ALGORITHMIC REALITY</p>
+</div>
+<div class="flex gap-20">
+<div class="text-center">
+<p class="text-6xl font-bold text-on-surface">68%</p>
+<p class="text-sm font-mono-label text-on-surface-variant uppercase mt-2 tracking-widest">Error Rate</p>
+</div>
+<div class="text-center">
+<p class="text-6xl font-bold text-on-surface">3.2s</p>
+<p class="text-sm font-mono-label text-on-surface-variant uppercase mt-2 tracking-widest">Reaction Lag</p>
+</div>
+<div class="text-center">
+<p class="text-6xl font-bold text-on-surface">1/3</p>
+<p class="text-sm font-mono-label text-on-surface-variant uppercase mt-2 tracking-widest">Market Uptime</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script>
+    // Subtle interactivity for the slide
+    document.querySelectorAll('.group').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Optional: trigger sound or subtle UI feedback
+        });
+    });
+</script>
+</body></html>

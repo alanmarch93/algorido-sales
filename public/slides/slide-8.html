@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Presentation Slide | Security &amp; Peace of Mind</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#b8c4ff",
+                        "secondary-fixed": "#7df4ff",
+                        "surface-variant": "#283645",
+                        "on-secondary-fixed": "#002022",
+                        "inverse-primary": "#2450dc",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c5d7",
+                        "surface-container": "#12212f",
+                        "surface-dim": "#051423",
+                        "midnight-bg": "#0B0E14",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c5c6ce",
+                        "tertiary-fixed": "#e2e2ea",
+                        "tertiary-container": "#6e6f76",
+                        "outline-variant": "#434655",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "on-tertiary-fixed": "#191b21",
+                        "on-primary": "#002584",
+                        "primary-container": "#3c63ee",
+                        "background": "#051423",
+                        "surface-container-highest": "#283645",
+                        "primary": "#b8c4ff",
+                        "outline": "#8e90a0",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "tertiary": "#c5c6ce",
+                        "on-secondary": "#00363a",
+                        "success-glow": "#00FFC2",
+                        "primary-fixed": "#dde1ff",
+                        "alert-signal": "#FF3B3B",
+                        "surface-card": "#161B22",
+                        "surface-container-low": "#0e1d2b",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "secondary": "#d3fbff",
+                        "inverse-surface": "#d5e4f8",
+                        "on-tertiary": "#2e3036",
+                        "on-tertiary-fixed-variant": "#45474d",
+                        "on-background": "#d5e4f8",
+                        "surface-bright": "#2c3a4a",
+                        "on-primary-fixed": "#001453",
+                        "on-secondary-container": "#00686f",
+                        "on-primary-container": "#f4f3ff",
+                        "on-primary-fixed-variant": "#0037b9",
+                        "on-surface": "#d5e4f8",
+                        "secondary-container": "#00eefc",
+                        "surface": "#051423",
+                        "on-error": "#690005",
+                        "surface-container-high": "#1d2b3a",
+                        "inverse-on-surface": "#243241",
+                        "on-tertiary-container": "#f3f3fb",
+                        "surface-container-lowest": "#020f1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "mono-label": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "mono-label": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(22, 27, 34, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(184, 196, 255, 0.1);
+        }
+        .glow-primary {
+            box-shadow: 0 0 30px rgba(184, 196, 255, 0.15);
+        }
+        .slide-layout {
+            aspect-ratio: 16 / 9;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        @media (max-width: 1024px) {
+            .slide-layout {
+                aspect-ratio: auto;
+                min-height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#020810] text-on-surface font-body-md selection:bg-primary/30 min-h-screen flex items-center justify-center p-4 lg:p-12">
+<!-- Presentation Canvas -->
+<main class="slide-layout glass-panel rounded-3xl relative overflow-hidden flex flex-col p-8 lg:p-16 border border-outline-variant/20 glow-primary">
+<!-- Background Decor -->
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary-fixed/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4"></div>
+<!-- Header Section -->
+<header class="relative z-10 flex justify-between items-start mb-12">
+<div class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-3 px-4 py-1.5 bg-surface-variant/40 border border-outline-variant/30 rounded-full w-fit">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]" data-icon="verified_user">verified_user</span>
+<span class="font-mono-label text-mono-label text-secondary-fixed tracking-widest uppercase">Protocol 08: Security Assurance</span>
+</div>
+<h1 class="font-headline-xl text-[44px] lg:text-[56px] text-on-surface leading-tight tracking-tight">
+                Built-In Security and <span class="text-primary">Peace of Mind</span>
+</h1>
+</div>
+<div class="hidden lg:flex flex-col items-end opacity-40">
+<span class="font-mono-label text-[10px] uppercase tracking-[0.3em]">Module: Risk Management</span>
+<span class="font-mono-label text-[10px] uppercase tracking-[0.3em]">Algorido v2.4</span>
+</div>
+</header>
+<!-- Fear vs Fix Layout -->
+<section class="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-2 gap-10">
+<!-- Fear 1 -->
+<div class="relative group">
+<div class="h-full bg-surface-container/30 border border-outline-variant/20 rounded-2xl p-10 flex flex-col transition-all duration-500 hover:bg-surface-container/50 hover:border-alert-signal/30">
+<div class="flex items-center gap-6 mb-8">
+<div class="p-4 bg-alert-signal/10 rounded-xl border border-alert-signal/20">
+<span class="material-symbols-outlined text-alert-signal text-[40px]" data-icon="trending_down">trending_down</span>
+</div>
+<div>
+<span class="font-mono-label text-mono-label text-alert-signal/70 tracking-widest uppercase mb-1 block">Scenario A: The Crash</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">"What if the market crashes?"</h3>
+</div>
+</div>
+<div class="flex-1 space-y-6">
+<div class="flex items-center gap-3">
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-outline-variant/40 to-transparent"></div>
+<span class="material-symbols-outlined text-success-glow text-[24px]" data-icon="auto_fix_high">auto_fix_high</span>
+<span class="font-mono-label text-mono-label text-success-glow tracking-widest uppercase">The Algorido Fix</span>
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-outline-variant/40 to-transparent"></div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Integrated <span class="text-on-surface font-semibold underline decoration-primary/40 decoration-2 underline-offset-4">safety brakes</span> and automated circuit breakers halt execution instantly. We protect your capital by disconnecting when volatility escapes pre-defined guardrails.
+                    </p>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="p-4 bg-surface-container-high rounded-lg border border-outline-variant/30 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]" data-icon="timer">timer</span>
+<div>
+<p class="text-[10px] font-mono-label uppercase text-on-surface-variant">Response Time</p>
+<p class="font-bold text-primary">&lt; 2ms</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container-high rounded-lg border border-outline-variant/30 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]" data-icon="gpp_maybe">gpp_maybe</span>
+<div>
+<p class="text-[10px] font-mono-label uppercase text-on-surface-variant">Protocol</p>
+<p class="font-bold text-primary">Auto-Kill</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Fear 2 -->
+<div class="relative group">
+<div class="h-full bg-surface-container/30 border border-outline-variant/20 rounded-2xl p-10 flex flex-col transition-all duration-500 hover:bg-surface-container/50 hover:border-secondary-fixed/30">
+<div class="flex items-center gap-6 mb-8">
+<div class="p-4 bg-secondary-fixed/10 rounded-xl border border-secondary-fixed/20">
+<span class="material-symbols-outlined text-secondary-fixed text-[40px]" data-icon="psychology">psychology</span>
+</div>
+<div>
+<span class="font-mono-label text-mono-label text-secondary-fixed/70 tracking-widest uppercase mb-1 block">Scenario B: The Logic</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">"How do I trust the AI logic?"</h3>
+</div>
+</div>
+<div class="flex-1 space-y-6">
+<div class="flex items-center gap-3">
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-outline-variant/40 to-transparent"></div>
+<span class="material-symbols-outlined text-success-glow text-[24px]" data-icon="auto_fix_high">auto_fix_high</span>
+<span class="font-mono-label text-mono-label text-success-glow tracking-widest uppercase">The Algorido Fix</span>
+<div class="h-px flex-1 bg-gradient-to-r from-transparent via-outline-variant/40 to-transparent"></div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Our <span class="text-on-surface font-semibold underline decoration-secondary-fixed/40 decoration-2 underline-offset-4">Time Machine Backtester</span> simulates every strategy against 10+ years of high-fidelity historical data. Zero live risk until the math is proven absolute.
+                    </p>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="p-4 bg-surface-container-high rounded-lg border border-outline-variant/30 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]" data-icon="history_toggle_off">history_toggle_off</span>
+<div>
+<p class="text-[10px] font-mono-label uppercase text-on-surface-variant">Data Range</p>
+<p class="font-bold text-secondary-fixed">10+ Years</p>
+</div>
+</div>
+<div class="p-4 bg-surface-container-high rounded-lg border border-outline-variant/30 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]" data-icon="query_stats">query_stats</span>
+<div>
+<p class="text-[10px] font-mono-label uppercase text-on-surface-variant">Precision</p>
+<p class="font-bold text-secondary-fixed">99.9% Depth</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visual Footer Reassurance -->
+<footer class="relative z-10 mt-12 flex items-center gap-8 py-6 px-8 bg-primary/5 border border-primary/10 rounded-xl overflow-hidden">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary/40"></div>
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-[44px]" data-icon="encrypted">encrypted</span>
+</div>
+<div class="flex-1 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div>
+<h4 class="font-headline-md text-headline-sm text-on-surface mb-1">Institutional Grade Encryption</h4>
+<p class="font-body-md text-on-surface-variant">API keys and assets are secured by cold-storage protocols and multi-sig authentication.</p>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="font-mono-label text-mono-label uppercase">Shield Active</span>
+<div class="w-12 h-px bg-primary/30"></div>
+<span class="font-mono-label text-mono-label uppercase tracking-widest">AES-256 Enabled</span>
+</div>
+</div>
+</footer>
+<!-- Slide Indicators (Visual only) -->
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+<div class="w-2 h-2 rounded-full bg-outline-variant/30"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant/30"></div>
+<div class="w-8 h-2 rounded-full bg-primary/60"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant/30"></div>
+</div>
+</main>
+</body></html>

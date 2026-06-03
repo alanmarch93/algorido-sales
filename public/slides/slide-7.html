@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Algorido AI - Everyday Benefits Presentation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#b8c4ff",
+                        "secondary-fixed": "#7df4ff",
+                        "surface-variant": "#283645",
+                        "on-secondary-fixed": "#002022",
+                        "inverse-primary": "#2450dc",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c4c5d7",
+                        "surface-container": "#12212f",
+                        "surface-dim": "#051423",
+                        "midnight-bg": "#0B0E14",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c5c6ce",
+                        "tertiary-fixed": "#e2e2ea",
+                        "tertiary-container": "#6e6f76",
+                        "outline-variant": "#434655",
+                        "secondary-fixed-dim": "#00dbe9",
+                        "on-tertiary-fixed": "#191b21",
+                        "on-primary": "#002584",
+                        "primary-container": "#3c63ee",
+                        "background": "#051423",
+                        "surface-container-highest": "#283645",
+                        "primary": "#b8c4ff",
+                        "outline": "#8e90a0",
+                        "primary-fixed-dim": "#b8c4ff",
+                        "tertiary": "#c5c6ce",
+                        "on-secondary": "#00363a",
+                        "success-glow": "#00FFC2",
+                        "primary-fixed": "#dde1ff",
+                        "alert-signal": "#FF3B3B",
+                        "surface-card": "#161B22",
+                        "surface-container-low": "#0e1d2b",
+                        "on-secondary-fixed-variant": "#004f54",
+                        "secondary": "#d3fbff",
+                        "inverse-surface": "#d5e4f8",
+                        "on-tertiary": "#2e3036",
+                        "on-tertiary-fixed-variant": "#45474d",
+                        "on-background": "#d5e4f8",
+                        "surface-bright": "#2c3a4a",
+                        "on-primary-fixed": "#001453",
+                        "on-secondary-container": "#00686f",
+                        "on-primary-container": "#f4f3ff",
+                        "on-primary-fixed-variant": "#0037b9",
+                        "on-surface": "#d5e4f8",
+                        "secondary-container": "#00eefc",
+                        "surface": "#051423",
+                        "on-error": "#690005",
+                        "surface-container-high": "#1d2b3a",
+                        "inverse-on-surface": "#243241",
+                        "on-tertiary-container": "#f3f3fb",
+                        "surface-container-lowest": "#020f1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "mono-label": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "mono-label": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-card {
+            background: rgba(22, 27, 34, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(184, 196, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.4), transparent);
+        }
+        @keyframes pulse-cyan {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+        .ai-pulse {
+            animation: pulse-cyan 3s infinite ease-in-out;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #0B1E32 0%, #051423 100%);
+        }
+    </style>
+</head>
+<body class="bg-midnight-bg text-on-surface font-body-md overflow-hidden">
+<div class="w-full h-full max-w-container-max mx-auto p-margin-desktop flex flex-col justify-center">
+<!-- Header Section -->
+<div class="mb-12 text-center">
+<div class="flex items-center justify-center gap-4 mb-6">
+<div class="h-[2px] w-16 bg-secondary-fixed shadow-[0_0_10px_rgba(125,244,255,0.6)]"></div>
+<span class="font-mono-label text-mono-label text-secondary-fixed tracking-[0.3em] uppercase">Protocol Intelligence</span>
+<div class="h-[2px] w-16 bg-secondary-fixed shadow-[0_0_10px_rgba(125,244,255,0.6)]"></div>
+</div>
+<h1 class="font-headline-xl text-[64px] leading-tight text-on-surface mb-6">Everyday Benefits.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto opacity-80">
+            Strategic asset optimization and institutional-grade execution for the modern portfolio.
+        </p>
+</div>
+<!-- Bento-style Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10 h-full max-h-[60vh]">
+<!-- Card 1: Hands-Free Income -->
+<div class="glass-card p-10 rounded-2xl flex flex-col border-white/5 hover:border-primary/30 transition-all duration-500">
+<div class="mb-8">
+<div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-[40px]" data-icon="automation">automation</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">Hands-Free Income</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    Set high-level parameters once. Our protocol handles sub-millisecond execution, balancing, and risk mitigation 24/7.
+                </p>
+</div>
+<div class="mt-auto pt-8 border-t border-outline-variant/10">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-success-glow ai-pulse shadow-[0_0_10px_#00FFC2]"></span>
+<span class="font-mono-label text-mono-label text-success-glow uppercase tracking-wider font-bold">100% Autonomous Efficiency</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Expert Mirroring -->
+<div class="glass-card p-10 rounded-2xl flex flex-col border-secondary-fixed/20 shadow-[0_0_50px_rgba(0,240,255,0.05)] transition-all duration-500">
+<div class="mb-8">
+<div class="w-16 h-16 bg-secondary-fixed/10 rounded-xl flex items-center justify-center mb-6 border border-secondary-fixed/20">
+<span class="material-symbols-outlined text-secondary-fixed text-[40px]" data-icon="groups">groups</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">Expert Mirroring</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    Mirror the strategic movements of top-tier institutional wallets in real-time with automated slippage protection.
+                </p>
+</div>
+<div class="mt-auto">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="font-mono-label text-on-surface-variant">Tracked Wallets</span>
+<span class="text-headline-md text-secondary-fixed font-bold">3,349+</span>
+</div>
+<div class="w-full bg-surface-variant/30 h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full w-[88%] shadow-[0_0_15px_rgba(125,244,255,0.6)]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Yield Generation -->
+<div class="glass-card p-10 rounded-2xl flex flex-col border-white/5 hover:border-tertiary/30 transition-all duration-500">
+<div class="mb-8">
+<div class="w-16 h-16 bg-tertiary/10 rounded-xl flex items-center justify-center mb-6 border border-tertiary/20">
+<span class="material-symbols-outlined text-tertiary text-[40px]" data-icon="account_balance">account_balance</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">Be the Bank</h3>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                    Capture transaction fees and liquidity rewards through AI-managed yield strategies across major protocols.
+                </p>
+</div>
+<div class="mt-auto pt-8 border-t border-outline-variant/10">
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<span class="font-mono-label text-on-surface-variant uppercase tracking-widest">Protocol APY</span>
+<span class="text-headline-md text-tertiary font-bold">+12.4%</span>
+</div>
+<div class="w-full bg-surface-variant/30 h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[72%] shadow-[0_0_15px_rgba(197,198,206,0.5)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Presentation Tagline -->
+<div class="mt-16 flex justify-between items-center opacity-40">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="hub">hub</span>
+<span class="font-mono-label text-on-surface tracking-widest font-bold">ALGORIDO AI AGENT // PROTOCOL PRESENTATION</span>
+</div>
+<div class="font-mono-label text-on-surface-variant">SESSION: PRT-2024-X1</div>
+</div>
+</div>
+<script>
+    document.querySelectorAll('.glass-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 30;
+            const rotateY = (centerX - x) / 30;
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+            card.style.boxShadow = `0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 240, 255, 0.1)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            card.style.boxShadow = `none`;
+        });
+    });
+</script>
+</body></html>
