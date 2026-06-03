@@ -16,7 +16,7 @@ const SLIDES = [
 
 const NAV_H = 60;
 const SLIDE_W = 1280;
-const SLIDE_H = 720;
+const SLIDE_H = 900;
 
 export default function Presentation() {
   const [current, setCurrent] = useState(0);
